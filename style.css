@@ -455,7 +455,9 @@ section:not(.hero) {
 }
 
 
-/* ================= CARDS ================= */
+/* ================================================= */
+/* ================= WISATA & UMKM ================= */
+/* ================================================= */
 
 .wisata {
     background: var(--pink-soft);
@@ -469,7 +471,7 @@ section:not(.hero) {
     display: grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(3, 1fr);
 
     gap: 22px;
 }
@@ -492,41 +494,75 @@ section:not(.hero) {
     transform: translateY(-8px);
 }
 
+
+/* ================= FOTO CARD ================= */
+
 .card-image {
+    width: 100%;
     height: 220px;
 
-    display: grid;
+    overflow: hidden;
 
-    place-items: center;
+    position: relative;
 
-    font-size: 60px;
-
-    color: var(--pink-dark);
+    display: block;
 }
 
+/*
+    Foto otomatis memenuhi area card.
+    object-fit: cover membuat foto tidak gepeng.
+*/
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform .4s ease;
+}
+
+
+/* Efek zoom ketika card disentuh/diklik mouse */
+
+.content-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+
+/* Warna cadangan jika gambar belum dimasukkan */
+
 .wisata-image {
-    background: linear-gradient(
-        135deg,
-        #ffd6e4,
-        #fff
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e4,
+            #fff
+        );
 }
 
 .food-image {
-    background: linear-gradient(
-        135deg,
-        #ffe2eb,
-        #fff
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #ffe2eb,
+            #fff
+        );
 }
 
 .umkm-image {
-    background: linear-gradient(
-        135deg,
-        #f8c1d4,
-        #fff
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #f8c1d4,
+            #fff
+        );
 }
+
+
+/* ================= CARD BODY ================= */
 
 .card-body {
     padding: 25px;
@@ -578,6 +614,12 @@ section:not(.hero) {
     font-weight: 700;
 
     cursor: pointer;
+
+    transition: .25s;
+}
+
+.favorite-btn:hover {
+    transform: translateY(-2px);
 }
 
 .favorite-btn.active {
@@ -838,6 +880,7 @@ footer {
     font-size: 20px;
 
     display: grid;
+
     place-items: center;
 
     cursor: pointer;
@@ -911,6 +954,8 @@ footer {
 }
 
 
+/* ================= MOBILE ================= */
+
 @media(max-width:600px) {
 
     .nav-container {
@@ -950,7 +995,8 @@ footer {
     }
 
     .stats-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
 
         gap: 12px;
     }
@@ -967,10 +1013,22 @@ footer {
         font-size: 12px;
     }
 
+    /* Card wisata menjadi satu kolom di HP */
+
     .cards,
     .service-grid,
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Ukuran foto di HP */
+
+    .card-image {
+        height: 230px;
+    }
+
+    .card-body {
+        padding: 22px;
     }
 
     .profile-card {
@@ -1000,4 +1058,4 @@ footer {
     .footer-container {
         grid-template-columns: 1fr;
     }
-  }
+        }
