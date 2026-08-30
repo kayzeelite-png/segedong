@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Segedong | Portal Desa</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#beranda" class="logo">
+            <span class="logo-icon">
+                <i class="fa-solid fa-tree"></i>
+            </span>
+
+            <span>Segedong</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="navMenu">
+
+            <a href="#beranda" class="active">
+                <i class="fa-solid fa-house"></i>
+                Beranda
+            </a>
+
+            <a href="#wisata">
+                <i class="fa-solid fa-mountain-sun"></i>
+                Wisata & UMKM
+            </a>
+
+            <a href="#layanan">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                Layanan
+            </a>
+
+            <a href="#galeri">
+                <i class="fa-solid fa-images"></i>
+                Galeri
+            </a>
+
+            <a href="#kontak">
+                <i class="fa-solid fa-phone"></i>
+                Kontak
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="beranda">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="weather">
+            <i class="fa-solid fa-cloud-sun"></i>
+            Cuaca Segedong:
+            <strong>31°C / Berawan Tropis</strong>
+        </div>
+
+        <h1>
+            Selamat Datang<br>
+            Di Desa <span>Segedong</span>
+        </h1>
+
+        <p>
+            Jelajahi wisata, kuliner, UMKM, pelayanan desa,
+            dan potensi lokal dalam satu portal interaktif.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#wisata" class="btn btn-primary">
+                <i class="fa-solid fa-compass"></i>
+                Jelajahi Wisata
+            </a>
+
+            <a href="#profil" class="btn btn-white">
+                <i class="fa-solid fa-house"></i>
+                Profil Desa
+            </a>
+
+            <a href="#galeri" class="btn btn-white">
+                <i class="fa-solid fa-image"></i>
+                Galeri Foto
+            </a>
+
+            <button class="btn btn-outline" onclick="shareWebsite()">
+                <i class="fa-solid fa-share-nodes"></i>
+                Bagikan
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATISTIK ================= -->
+
+<section class="stats">
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <h2>3,500+</h2>
+            <p>Penduduk Desa</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                <i class="fa-solid fa-mountain"></i>
+            </div>
+
+            <h2>12</h2>
+            <p>Spot Wisata Alam</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                <i class="fa-solid fa-store"></i>
+            </div>
+
+            <h2>45+</h2>
+            <p>UMKM Lokal</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <h2 id="favoriteCount">0</h2>
+            <p>Item Favorit Anda</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROFIL ================= -->
+
+<section class="profile" id="profil">
+
+    <div class="section-title">
+
+        <span>TENTANG DESA</span>
+
+        <h2>Tentang Kami</h2>
+
+        <p>
+            Mengenal lebih dekat Desa Segedong dan
+            potensi masyarakatnya.
+        </p>
+
+    </div>
+
+
+    <div class="profile-card">
+
+        <div class="profile-text">
+
+            <h3>
+                Dusun Sempadung Desa Segedong
+            </h3>
+
+            <p>
+                Dusun Sempadung Desa Segedong adalah wilayah
+                bagian dari Desa Segedong, Kecamatan Tebas,
+                Kabupaten Sambas, Kalimantan Barat.
+            </p>
+
+            <div class="profile-buttons">
+
+                <a href="#" class="btn btn-primary">
+                    <i class="fa-solid fa-book-open"></i>
+                    Baca Profil Lengkap
+                </a>
+
+                <a href="#" class="btn btn-pink">
+                    <i class="fa-solid fa-bullseye"></i>
+                    Visi & Misi
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WISATA ================= -->
+
+<section class="wisata" id="wisata">
+
+    <div class="section-title">
+
+        <span>JELAJAHI</span>
+
+        <h2>Wisata & UMKM</h2>
+
+        <p>
+            Temukan berbagai potensi menarik yang ada
+            di Desa Segedong.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="content-card">
+
+            <div class="card-image wisata-image">
+                <i class="fa-solid fa-tree"></i>
+            </div>
+
+            <div class="card-body">
+
+                <span class="badge">WISATA</span>
+
+                <h3>Pesona Alam Segedong</h3>
+
+                <p>
+                    Nikmati keindahan alam dan suasana
+                    pedesaan yang masih asri.
+                </p>
+
+                <button class="favorite-btn">
+                    <i class="fa-regular fa-heart"></i>
+                    Favorit
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="content-card">
+
+            <div class="card-image food-image">
+                <i class="fa-solid fa-bowl-food"></i>
+            </div>
+
+            <div class="card-body">
+
+                <span class="badge">KULINER</span>
+
+                <h3>Kuliner Khas Lokal</h3>
+
+                <p>
+                    Rasakan berbagai kuliner khas dan
+                    makanan lokal masyarakat.
+                </p>
+
+                <button class="favorite-btn">
+                    <i class="fa-regular fa-heart"></i>
+                    Favorit
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="content-card">
+
+            <div class="card-image umkm-image">
+                <i class="fa-solid fa-store"></i>
+            </div>
+
+            <div class="card-body">
+
+                <span class="badge">UMKM</span>
+
+                <h3>Produk Unggulan Desa</h3>
+
+                <p>
+                    Dukung produk dan usaha kreatif
+                    masyarakat Desa Segedong.
+                </p>
+
+                <button class="favorite-btn">
+                    <i class="fa-regular fa-heart"></i>
+                    Favorit
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LAYANAN ================= -->
+
+<section class="services" id="layanan">
+
+    <div class="section-title">
+
+        <span>PELAYANAN</span>
+
+        <h2>Layanan Desa</h2>
+
+        <p>
+            Informasi layanan yang mudah diakses masyarakat.
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <h3>Administrasi Desa</h3>
+
+            <p>
+                Informasi mengenai berbagai pelayanan
+                administrasi desa.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <h3>Informasi Publik</h3>
+
+            <p>
+                Pengumuman dan informasi penting
+                mengenai desa.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-headset"></i>
+
+            <h3>Pengaduan</h3>
+
+            <p>
+                Sampaikan pertanyaan, saran,
+                dan masukan kepada desa.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALERI ================= -->
+
+<section class="gallery" id="galeri">
+
+    <div class="section-title">
+
+        <span>DOKUMENTASI</span>
+
+        <h2>Galeri Desa</h2>
+
+        <p>
+            Dokumentasi kegiatan dan potensi Desa Segedong.
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <div>
+                <i class="fa-solid fa-camera"></i>
+                <p>Kegiatan Masyarakat</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div>
+                <i class="fa-solid fa-sun"></i>
+                <p>Pemandangan Desa</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div>
+                <i class="fa-solid fa-calendar-days"></i>
+                <p>Acara Desa</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= KONTAK ================= -->
+
+<section class="contact" id="kontak">
+
+    <div class="contact-box">
+
+        <div>
+
+            <span>HUBUNGI KAMI</span>
+
+            <h2>
+                Mari Bersama Membangun
+                Desa Segedong
+            </h2>
+
+            <p>
+                Hubungi pemerintah desa untuk mendapatkan
+                informasi lebih lanjut.
+            </p>
+
+        </div>
+
+        <a href="mailto:desa@example.com"
+           class="btn btn-pink">
+
+            <i class="fa-solid fa-envelope"></i>
+            Hubungi Kami
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <h2>
+                <i class="fa-solid fa-tree"></i>
+                Segedong
+            </h2>
+
+            <p>
+                Portal digital Desa Segedong untuk
+                mengenalkan potensi, wisata, UMKM,
+                dan layanan desa.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Navigasi</h3>
+
+            <a href="#beranda">Beranda</a>
+            <a href="#wisata">Wisata & UMKM</a>
+            <a href="#layanan">Layanan</a>
+            <a href="#galeri">Galeri</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Kontak</h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Desa Segedong, Kalimantan Barat
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                08xx-xxxx-xxxx
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                desa@example.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Desa Segedong.
+        Dibuat untuk memajukan potensi desa.
+
+    </div>
+
+</footer>
+
+
+<button id="backTop">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+  </html>
