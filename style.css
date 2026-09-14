@@ -900,6 +900,30 @@ footer {
     pointer-events: auto;
 }
 
+/* ================= TOMBOL HUBUNGI KAMI ================= */
+
+.contact-box {
+    position: relative;
+}
+
+.contact-box .contact-button {
+    position: relative;
+    z-index: 9999;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    cursor: pointer;
+    pointer-events: auto !important;
+    text-decoration: none;
+}
+
+.contact-box .contact-button:hover {
+    background: var(--pink-dark);
+    color: white;
+    transform: translateY(-3px);
+}
+
 
 /* ================= RESPONSIVE ================= */
 
